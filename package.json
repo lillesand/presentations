@@ -1,0 +1,14 @@
+{
+  "name": "presentation",
+  "description": "published presentations",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.10.32",
+    "npm": "2.1.4"
+  },
+  "dependencies": {
+    "http-server": "0.7.2"
+  }
+}
+
