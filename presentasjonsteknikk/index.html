@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Presentasjonsteknikk</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			.reveal section img {
+				border: none;
+			}
+
+			section .header {
+				position: relative;
+				background-color: black;
+			}
+
+			section .header h2 {
+				padding: 10px;
+			}
+
+			section .header .caption {
+				position: absolute;
+				font-size: 20px;
+				text-align: left;
+				background-color:inherit;
+				top: -24px;
+				padding: 2px 10px;
+			}
+
+			ul.terse li {
+				list-style: none;
+				margin-bottom: 0.5em;
+			}
+
+			ul:not(.terse) li {
+				list-style: none;
+				margin-bottom: 0.5em;
+			}
+
+			ul li .point {
+				margin-right: 1.5em;
+				font-size: 0.92em;
+				display: inline-block;
+			}
+
+			ul li .point.inverse {
+				transform: scaleX(-1);
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="intro">
+					<section>
+						<h1>Presentasjon 2.0</h1>
+					</section>
+
+					<section data-background-image="img/superjøran.jpg" data-background-position="right"
+							 data-background-size="50%" data-background-color="white">
+
+						<div style="background-color: black; color: white; opacity: 0.8; left: 0; width: 50%; padding: 20px;">
+							<h2 style="color: white">Jøran</h2>
+							<ul class="terse">
+								<li>Fagsjef i Tech</li>
+								<li>Utvikler på Digipost</li>
+								<li>Holdt presentasjoner i 8 år<br>
+									<span style="font-size: 0.8em; margin-left: 2em;">…og angret hver gang</span>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section data-background-image="img/mikrofon.jpg">
+						<div class="header" style="background-color: white; color: black">
+							<h2 style="color: inherit;">
+								Presentasjonsteknikk
+							</h2>
+
+							<aside class="notes">
+								<ul>
+									<li>Kurs i presentasjonsteknikk</li>
+									<li>Antikkens overtalelsesmodeller</li>
+									<li>Teatersport</li>
+									<li><b>I dag: 4 enkle råd!</b></li>
+								</ul>
+							</aside>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="img/forberedt-mat.jpg">
+						<div class="header" style="color: #45C134">
+							<div class="caption">Råd #1</div>
+							<h2 style="color: inherit;">
+								Forberede deg
+							</h2>
+						</div>
+					</section>
+
+					<section>
+						<div>
+							En god presentasjon tar…
+							<h1>Én time per minutt</h1>
+							… minst.
+						</div>
+					</section>
+
+					<section>
+						<h2>Øv masse</h2>
+						<ul>
+							<li><span class="point">👨‍👩‍👧‍👦</span>Presenter for publikum
+								<div style="font-size: 0.8em; margin-left: 3.5em;">…kjæresten din, katta di, sofaen din, veggen din</div>
+							</li>
+							<li class="fragment"><span class="point">♻️</span>Gjenbruk gode presentasjoner!</li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li><span class="point">&#x1F629;</span>Avtal testgjennomgang en uke før</li>
+								<li>Terp på overganger</li>
+								<li>En for kort presentasjon er aldri et problem</li>
+							</ul>
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+					<section data-background-image="img/obama.jpg">
+						<div class="header" style="color: #B79A79">
+							<div class="caption">Råd #2</div>
+							<h2 style="color: inherit;">
+								Ha et budskap
+							</h2>
+						</div>
+					</section>
+
+					<section>
+						<div>
+							Spør deg selv tidlig…
+							<h1>Hva er målet med presentasjonen?</h1>
+						</div>
+
+						<aside class="notes">
+							Meg:
+							<ul>
+								<li>At dere holder en presentasjon dere ellers ikke ville holdt</li>
+								<li>At dere prøver noe <em>litt</em> anderledes neste gang dere presenterer</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Spør deg deg selv</h2>
+						<ul>
+							<li><span class="point">🎯</span>Hvilken effekt ønsker du å ha?</li>
+							<li class="fragment"><span class="point">🌱</span>Hvor mye kan jeg dekke?</li>
+						</ul>
+					</section>
+				</section>
+
+
+
+				<section>
+					<section data-background-image="img/klovn.jpg">
+						<div class="header" style="color: #FF0012">
+							<div class="caption">Råd #3</div>
+							<h2 style="color: inherit;">
+								Omfavne frykten
+							</h2>
+						</div>
+					</section>
+
+					<section>
+						<div>
+							Når jeg holder presentasjon har jeg
+							<h1><span style="color: orangered;" id="pulse-holder">120</span> i puls</h1>
+							… og det er greit.
+						</div>
+					</section>
+
+					<section>
+						<h2>Alle er nervøse</h2>
+
+						<ul>
+							<li><span class="point">😐</span>Aksepter nervøsiteten</li>
+							<li class="fragment"><span class="point">😌</span>Legg opp dagen for godfølelsen</li>
+							<li class="fragment"><span class="point">🤓</span>Kjenn stoffet ditt</li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>Nervøsitet skjerper deg</li>
+								<li>Det vises mindre enn du tror</li>
+								<li>Legg opp dagen: ikke stå opp grytidlig og ha en stressfull dag</li>
+								<li>Spis og drikk riktig, ikke vær fyllesyk</li>
+								<li>Nervøsiteten blir enda verre hvis du ikke føler deg trygg</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="img/apple-simple.jpg">
+						<div class="header" style="color: #D5D5CB">
+							<div class="caption">Råd #4</div>
+							<h2 style="color: inherit;">
+								Bruke enkle slides
+							</h2>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>Mye dårlige powerpointmaler</li>
+								<li>Fontstørrelse 16, egnet for å sende på mail</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<div>
+							Ingen vil lese en presentasjon
+							<h1>Folk vil høre deg fortelle!</h1>
+						</div>
+					</section>
+
+					<section>
+						<h2>Mindre er bedre</h2>
+						<ul>
+							<li><span class="point">📖</span>Unngå mye tekst</li>
+							<li class="fragment"><span class="point inverse">👌</span>Understrek poenger</li>
+							<li class="fragment"><span class="point inverse">🤔</span>Vis ting som er vanskelig å fortelle</li>
+						</ul>
+					</section>
+				</section>
+
+				<!--
+				<section>
+					<section data-background-image="img/fiolinbue.jpg">
+						<div class="header" style="color: #B79A79">
+							<div class="caption">Du skal…</div>
+							<h2 style="color: inherit;">
+								Alltid bli bedre
+							</h2>
+						</div>
+					</section>
+
+					<section>
+						<div>
+							Hvis du blir
+							<h1>Litt bedre hver gang</h1>
+							… blir det til slutt veldig bra!
+						</div>
+					</section>
+
+					<section>
+						<h2>Benytt mulighetene</h2>
+
+						<ul>
+							<li><span class="point inverse">👀</span>Se deg selv på video</li>
+							<li><span class="point inverse">💪</span>Be om tilbakemeldinger</li>
+							<li><span class="point">🗣</span>Prøv ut nye ting</li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>Tilbakemeldinger: husk at du vet best hva som passer for deg!</li>
+								<li>Test nye ting på arenaer med lavere risk</li>
+							</ul>
+						</aside>
+					</section>
+					-->
+				</section>
+
+				<section id="outro">
+
+					<section data-background-image="img/føtter-strand.jpg">
+						<div class="header" style="color: #B79A79">
+							<div class="caption">Viktigst av alt…</div>
+							<h1 style="color: inherit;">
+								Du må bare prøve!
+							</h1>
+						</div>
+					</section>
+
+
+					<section>
+						<h2>Oppsummert</h2>
+						<ul>
+							<li><span class="point">🎓</span>Vær forberedt</li>
+							<li class="fragment"><span class="point inverse">📢</span>Ha et budskap</li>
+							<li class="fragment"><span class="point">😰</span>Aksepter nervøsitet</li>
+							<li class="fragment"><span class="point" style="transform: rotate(-42deg) scaleX(-1)">🔑</span>Ha enkle slides</li>
+							<!--<li><span class="point">📈</span>Gjør det litt bedre hver gang</li>-->
+						</ul>
+					</section>
+
+					<section>
+						<h1>Takk for meg!</h1>
+					</section>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+	<script>
+		(function() {
+			var holder = document.querySelector('#pulse-holder');
+
+			setInterval(function() {
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function() {
+					if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+						holder.innerText = xmlHttp.responseText;
+					}
+				};
+				xmlHttp.open("GET", "http://localhost:2000/", true); // true for asynchronous
+				xmlHttp.send(null);
+			}, 500);
+		})();
+	</script>
+
+	</body>
+</html>
