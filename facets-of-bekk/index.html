@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js – The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style>
+        .reveal section img {
+            border: none;
+        }
+
+        section .header {
+            position: relative;
+            background-color: black;
+            opacity: 0.8;
+        }
+
+        section .header h2 {
+            padding: 10px;
+        }
+
+        section .header .caption {
+            position: absolute;
+            font-size: 20px;
+            text-align: left;
+            background-color: inherit;
+            top: -24px;
+            padding: 2px 10px;
+        }
+
+        section .header .footer {
+            position: absolute;
+            font-size: 20px;
+            text-align: right;
+            background-color: inherit;
+            bottom: -24px;
+            right: 0;
+            padding: 2px 10px;
+        }
+
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+        }
+
+        .reveal section li {
+            list-style: none;
+        }
+
+        .imgbox {
+            width: 50%;
+            float: left;
+        }
+
+        .reveal .imgtext {
+            width: 45%;
+            float: left;
+            padding: 0 20px 0 20px;
+        }
+
+        .imgtext h2 {
+            margin-bottom: 10px;
+        }
+
+        .reveal .master-title {
+            font-size: 0.75em;
+            font-style: italic;
+            text-align: left;
+            margin-top: 1em;
+        }
+
+        .reveal .master-title:after {
+            content: "»";
+        }
+
+        .reveal .master-title:before {
+            content: "«";
+        }
+
+        .reveal .authors {
+            float: right;
+            font-size: 0.5em;
+        }
+
+        .reveal .authors:before {
+            content: "–";
+        }
+
+        .reveal dd {
+            font-size: 0.8em;
+        }
+
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+        <section id="intro">
+            <section data-background-image="img/olav_cencored.jpg"></section>
+
+            <aside class="notes">
+                Velkommen til Faces of Bekk!<br>
+                Skal få høre om fire røvere som jobber i BEKK<br>
+            </aside>
+        </section>
+
+        <section data-background-image="img/jøran.jpg">
+            <div class="header" style="color: #EB8964; margin-top: 350px;">
+                <div class="caption">Møt…</div>
+                <h2 style="color: inherit;">
+                    Jøran
+                </h2>
+            </div>
+
+            <aside class="notes">
+                Kort om meg selv:
+                <ul>
+                    <li>Jobbet i bekk i 8 år</li>
+                    <li><span style="text-decoration: line-through;">Fagansvarlig</span>mellomleder i Tech med
+                        personalansvar
+                    </li>
+                    <li>Er en Posten-røver på dagtid</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section id="satser-pa-folk">
+            <section data-background-image="img/hanne_presentasjon.jpg">
+                <div class="header" style="color: #C1C5BC; margin-top: 250px;">
+                    <div class="caption">Vi er et sted som…</div>
+                    <h2 style="color: inherit;">
+                        Satser på folk
+                    </h2>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>«Nå har jeg målet klart. I løpet av fem år skal jeg snakke i sal 1»</li>
+                        <li>Vil satse og investere i deg</li>
+                        <li>… når du vil og er klar. Det er mange som bare ønsker å gjøre faget sitt godt!</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <section id="de-beste-fagfolka">
+            <section data-background-image="img/programmeringskonkurranse.jpg">
+                <div class="header" style="color: #C9F7AF; margin-bottom: 350px;">
+                    <div class="caption">Og da får vi…</div>
+                    <h2 style="color: inherit;">
+                        De aller råeste folkene
+                    </h2>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Fagdager, faggruppemøter, bra prosjekter..! Det har vel alle</li>
+                        <li>Vi har dette, fylt med utrolig bra folk</li>
+                        <li>Fagdager som er på nivå med, om ikke bedre enn, de fleste konferansene du finner i landet</li>
+                        <li>Se dagen i dag! Dette er ikke folk som er her for å rekruttere, de snakker fordi de vil!</li>
+                        <li>15% av de som bidro på årets JavaZone kom fra BEKK</li>
+                        <li>Selv om du ikke vil presentere selv nyter du veldig godt av miljøet!</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <section id="impact">
+            <section data-background-image="img/hoppetau.jpg">
+                <div class="header" style="color: #72F4F6">
+                    <div class="caption">Det lar oss…</div>
+                    <h2 style="color: inherit;">
+                        Gjøre en forskjell
+                    </h2>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Velger kunder, prosjekter og roller som gir oss stort impact</li>
+                        <li>Vi må tjene penger, men vi tar ikke kjipe roller bare for å få penga</li>
+                        <li>Har sagt nei til store engasjementer fordi riggen ikke er riktig</li>
+                        <li>Digipost, Fründer, Skatt, Folkeregisteret</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <section id="akademi">
+            <section data-background-image="img/funksjonell-prog-kurs.jpg">
+                <div class="header" style="color: #72F4F6">
+                    <div class="caption">Derfor må vi være…</div>
+                    <h2 style="color: inherit;">
+                        Norges beste akademi
+                    </h2>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Strukturert opplæringsopplegg over de første 8 årene</li>
+                        <li>Mye ekstra tilbud i det du ønsker</li>
+                        <li>Som et program som bare fortsetter og fortsetter</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <section id="karriere-og-rolle">
+            <section data-background-image="img/nodecopter-programmers.jpg">
+                <div class="header" style="color: #88BDF0; margin-bottom: 200px; transform: rotate(-10.5deg)">
+                    <div class="caption">Der du kan…</div>
+                    <h2 style="color: inherit;">
+                        Definere din egen karriere
+                    </h2>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Mange ulike karriereveier: salg, prosjektledelse, teamledelse, tech lead, utvikler, personalansvarlig, bootcampansvarlig…</li>
+                        <li>Må ikke velge én; kan skifte mellom, kan over tid bygge din egen rolle</li>
+                        <li>Eks: meg.</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+
+        <section id="outro">
+            <section data-background-image="img/bekk-buffet.jpg">
+                <div class="header">
+                    <h2>Hva er liksom greia med Bekk?</h2>
+                </div>
+
+                <div class="header" style="font-size: 1.2em; padding: 1em; text-align: left; line-height: 1.5em;">
+                    <style>
+                        #outro li span {
+                            height: 0.75em;
+                            margin: 0 25px 0 0;
+                        }
+                    </style>
+                    <ul>
+                        <li class="fragment"><span>🤗</span>Vi satser på folk</li>
+                        <li class="fragment"><span>😎</span>… som gir oss de beste fagfolkene</li>
+                        <li class="fragment"><span>👊</span>… og lar oss gjøre ting med impact</li>
+                        <li class="fragment"><span>👧🏽</span>… det krever Norges beste akademi</li>
+                        <li class="fragment"><span>🕵</span>… med folk som definerer sine egne karrierer</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Vær et sted der vi ønsker å gi folk ansvar og satser på ansatte</li>
+                        <li>Muligheter til å dra karrieren din i den retningen du vil</li>
+                        <li>Det er en god sjanse for at kollegaen din er best i landet på noe!</li>
+                        <li>… og bra folk lager sjukt bra sosialt miljø</li>
+                        <li>BEKK er store nok til å gjøre en forskjell, men små nok til at <em>du</em> er viktig</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section data-background-image="img/innflyttingsfest-senkveld.jpg">
+                <div class="header" style="margin-top: 400px;">
+                    <h1 style="color: #F4CD90">Slutter folk i BEKK?</h1>
+                </div>
+
+                <aside class="notes">
+                    <b>JA</b>, men det gøye er…
+                    <ul>
+                        <li>De som slutter går til fete steder</li>
+                        <li>Starter egne selskaper</li>
+                        <li>… vi har veldig lav turnover</li>
+                    </ul>
+
+                </aside>
+            </section>
+
+            <section data-background-image="img/nicolay_du.jpg">
+                <div class="header" style="margin-top: 400px;">
+                    <h1 style="color:#E87E33; font-size: 85px;">Hvem bør søke BEKK?</h1>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Vanskelig å vite hvem som blir de beste</li>
+                        <li>Ikke vær redd for å søke</li>
+                        <li>Både vi og du kan bruke søknadsprosessen til å finne ut om det er en god match</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <section id="ferdig">
+            <section data-background-image="img/barnebursdag.jpg">
+                <div class="header">
+                    <h1 style="font-size: 125px;">jobb@bekk.no</h1>
+                </div>
+
+                <div class="fragment header" style="opacity:0.8">
+                    <h2 style="font-size: 0.8em;">
+                        Sommerjobb i Trondheim: 5. mars
+                    </h2>
+                </div>
+
+                <div class="fragment header" style="opacity:0.8">
+                    <h2 style="font-size: 0.8em;">
+                        Er du i tvil? Send en mail!
+                    </h2>
+                </div>
+
+                <aside class="notes">
+                    <b>Før fragment:</b>
+                    <ul>
+                        <li>Ferdig: Sommerjobber i Oslo 2016</li>
+                        <li>Hovedfokus på rekruttering er på høsten (for oppstart 2017)</li>
+                        <li>Er du i tvil: send en mail!</li>
+                        <li>Søknad, CV, karakterutskrift</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section data-background-image="img/innflyttingsfest-øl.jpg">
+                <div class="header">
+                    <h1>Nok om det!</h1>
+                </div>
+
+                <img src="img/tag.png" style="background-color: black; opacity:0.7;">
+
+                <aside class="notes">
+                    <ul>
+                        <li>De fra BEKK har buttons</li>
+                        <li>Spør om alt! Spesielt Olav om programmering!</li>
+                        <li>Til Tag!</li>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+    </div>
+
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: false,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
