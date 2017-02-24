@@ -12,6 +12,13 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+        <style>
+            .reveal section img {
+                border: none;
+                box-shadow: none;
+            }
+        </style>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -24,13 +31,87 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+                <section id="hei">
+                    <section>
+                        <span style="font-size: 256px;">🙇</span>
+                    </section>
+
+                    <section>
+                        Jøran
+                    </section>
+
+                    <section data-background-image="img/discovery.png" data-background-size="100%" data-background-color="white">
+                    </section>
+                </section>
+
+                <section id="historie">
+                    <section>
+                        J
+                        :)
+                    </section>
+
+                    <section id="japan" style="font-size: 150px;">
+                        <span class="revolving">(n_n)</span>
+                        <span class="revolving">(._.)</span>
+                        <span class="revolving">(-_-)</span>
+                        <span class="revolving">(;_;)</span>
+                        <span class="revolving">(@_@)</span>
+                        <span class="revolving">(*_*)</span>
+                        <span class="revolving">(x_x)</span>
+                        <span class="revolving">(>_<)</span>
+                        <span class="revolving">(>_<)</span>
+                    </section>
+
+                    <section data-background-image="img/nttcom-emoji.png" data-background-size="100%" data-background-color="white">
+                        <aside class="notes">
+                            <ul>
+                                <li>NTT DoCoMo 1998</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-background-color="white">
+                        <img src="img/original-ios-emoji-set.jpeg"/>
+                    </section>
+
+
+                    <section>
+                        icq
+                        msn
+                    </section>
+
+                    <section>
+                        standardisering. Første versjon inn i unicode
+                    </section>
+                </section>
+
+
+                <section id="emojis-fabriks">
+                    <section>Hvem lager emojis? Emojidex osv</section>
+                </section>
+
+                <section id="tech">
+                    <section>Neckbeard</section>
+                    <section>Codepoints</section>
+                    <section>Hvordan bygges nye emojis opp (+)
+                    zero width joiner</section>
+                    <section>Standardisering</section>
+                </section>
+
+
+                <section id="kulturelle-godbiter">
+
+                </section>
+
+                <section id="samfunnsimpact">
+
+                </section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="js/jquery.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -46,5 +127,31 @@
 				]
 			});
 		</script>
+
+        <script>
+            $(document).ready(function() {
+                $('.slides section').each(function(i, e) {
+                    var revolvers = $(e).find('.revolving');
+                    if (revolvers.length > 1) {
+                        revolvers.css('display', 'none');
+                        revolvers.css('opacity', '1');
+                        revolvers.css('transition', 'opacity .25s ease-in-out;');
+
+                        window.revolvers = revolvers;
+                        var current = 0;
+                        setInterval(function() {
+                            var next = (current + 1) % revolvers.length;
+                            $(revolvers[current]).fadeOut(500, function() {
+                                $(revolvers[next]).fadeIn(500);
+                            });
+
+                            current = next;
+                        }, 2500);
+                    }
+
+                });
+            });
+
+        </script>
 	</body>
 </html>
