@@ -17,6 +17,20 @@
                 border: none;
                 box-shadow: none;
             }
+
+            .reveal section.explained-emojis {
+                font-size: 150px;
+            }
+
+            .reveal section.explained-emojis .text-emoji {
+                font-family: Courier, 'Courier New', monospace;
+            }
+
+            .reveal section.explained-emojis .explanation {
+                display: block;
+                font-size: 30px;
+                margin-left: 150px;
+            }
         </style>
 
 		<!-- Printing and PDF exports -->
@@ -50,17 +64,18 @@
                         :)
                     </section>
 
-                    <section id="japan" style="font-size: 150px;">
-                        <span class="revolving">(n_n)</span>
-                        <span class="revolving">(._.)</span>
-                        <span class="revolving">(-_-)</span>
-                        <span class="revolving">(;_;)</span>
-                        <span class="revolving">(@_@)</span>
-                        <span class="revolving">(*_*)</span>
-                        <span class="revolving">(x_x)</span>
-                        <span class="revolving">(>_<)</span>
-                        <span class="revolving">(>_<)</span>
-                    </section>
+                    <section id="japan" class="explained-emojis">
+                        <div class="revolving"><span class="text-emoji">(n_n)</span><span class="explanation">smile</span></div>
+                        <div class="revolving"><span class="text-emoji">(._.)</span><span class="explanation">uh…oh</span></div>
+                        <div class="revolving"><span class="text-emoji">(-_-)</span><span class="explanation">sleepy</span></div>
+                        <div class="revolving"><span class="text-emoji">(;_;)</span><span class="explanation">tears</span></div>
+                        <div class="revolving"><span class="text-emoji">(@_@)</span><span class="explanation">confused</span></div>
+                        <div class="revolving"><span class="text-emoji">(*_*)</span><span class="explanation">astonished</span></div>
+                        <div class="revolving"><span class="text-emoji">(x_x)</span><span class="explanation">dead</span></div>
+                        <div class="revolving"><span class="text-emoji">(>_<)</span><span class="explanation">ouch</span></div>
+                        <div class="revolving"><span class="text-emoji">(^_^)</span><span class="explanation">happy</span></div>
+                        <div class="revolving"><span class="text-emoji">*(^_^)*</span><span class="explanation">happier</span></div>
+                    </section> <span></span>
 
                     <section data-background-image="img/nttcom-emoji.png" data-background-size="100%" data-background-color="white">
                         <aside class="notes">
@@ -139,6 +154,7 @@
 
                         window.revolvers = revolvers;
                         var current = 0;
+                        $(revolvers[current]).fadeIn(0);
                         setInterval(function() {
                             var next = (current + 1) % revolvers.length;
                             $(revolvers[current]).fadeOut(500, function() {
