@@ -147,12 +147,11 @@
             $(document).ready(function() {
                 $('.slides section').each(function(i, e) {
                     var revolvers = $(e).find('.revolving');
-                    if (revolvers.length > 1) {
+                    if (revolvers.length > 1 && $(e).find('section').length == 0) {
                         revolvers.css('display', 'none');
                         revolvers.css('opacity', '1');
                         revolvers.css('transition', 'opacity .25s ease-in-out;');
 
-                        window.revolvers = revolvers;
                         var current = 0;
                         $(revolvers[current]).fadeIn(0);
                         setInterval(function() {
