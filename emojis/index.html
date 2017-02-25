@@ -31,6 +31,10 @@
                 font-size: 30px;
                 margin-left: 150px;
             }
+
+            .reveal section.single-emoji-slide {
+                font-size: 250px;
+            }
         </style>
 
 		<!-- Printing and PDF exports -->
@@ -46,8 +50,8 @@
 		<div class="reveal">
 			<div class="slides">
                 <section id="hei">
-                    <section>
-                        <span style="font-size: 256px;">🙇</span>
+                    <section class="single-emoji-slide">
+                        <span>🙇</span>
                     </section>
 
                     <section>
@@ -56,8 +60,9 @@
                     </section>
 
                     <section data-background-image="img/discovery.png" data-background-size="100%" data-background-color="white"></section>
-                    <section data-background-image="img/entusiast.png" data-background-size="100%" data-background-color="white"></section>
-                    <section data-background-image="img/uffda.png" data-background-size="100%" data-background-color="white"></section>
+                    <section data-background-color="white">
+                        <img src="img/entusiast.png" style="height: 80%"/>
+                    </section>
                 </section>
 
                 <section id="historie" class="explained-emojis">
@@ -80,7 +85,8 @@
                         <div class="revolving"><span class="text-emoji">*(^_^)*</span><span class="explanation">happier</span></div>
                     </section> <span></span>
 
-                    <section data-background-image="img/nttcom-emoji.png" data-background-size="100%" data-background-color="white">
+                    <section data-background-color="white">
+                        <img src="img/nttcom-emoji.png" alt="nttcom emojis">
                         <aside class="notes">
                             <ul>
                                 <li>NTT DoCoMo 1998</li>
@@ -90,30 +96,48 @@
 
                     <section data-background-color="white">
                         <img src="img/original-ios-emoji-set.jpeg"/>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>iPhone3GS i Japan i 2009</li>
+                                <li>Willem Van Lancker designet 400 av 500 som intern</li>
+                                <li>Skulle endre mye - brakte emojiene til vesten</li>
+                            </ul>
+                        </aside>
                     </section>
 
-
-                    <section>
-                        icq
-                        msn
-                    </section>
-
-                    <section>
-                        standardisering. Første versjon inn i unicode
+                    <section class="single-emoji-slide">
+                        <span>🤓</span>
+                        <aside class="notes">
+                            <ul>
+                                <li>Unicode 6.0 i 2010</li>
+                                <li>Standardiserte emojis</li>
+                                <li>Måtte ta hensyn til eksisterende bruk</li>
+                                <li>Japan, webdings, osv</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
-
-                <section id="emojis-fabriks">
-                    <section>Hvem lager emojis? Emojidex osv</section>
-                </section>
 
                 <section id="tech">
-                    <section>Neckbeard</section>
-                    <section>Codepoints</section>
+                    <section data-background-image="img/uffda.png" data-background-size="100%" data-background-color="white"></section>
+                    <section data-background-color="white">
+                        <img src="img/brokeback-linux.png" alt="lol">
+                    </section>
+                    
+                    <section>
+                        <a href="https://socialcast.bekk.no/messages/36924" target="_blank"><img src="img/rar-teaser.png" alt="socialcats"></a>
+                    </section>
+
+                    <section>Vis kodepoints og zwj i javascript</section>
                     <section>Hvordan bygges nye emojis opp (+)
                     zero width joiner</section>
                     <section>Standardisering</section>
+                </section>
+
+                <section id="emojis-fabriks">
+                    <section>Hvem lager emojis? Emojidex osv</section>
                 </section>
 
 
