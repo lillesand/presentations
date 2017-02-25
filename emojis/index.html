@@ -35,6 +35,17 @@
             .reveal section.single-emoji-slide {
                 font-size: 250px;
             }
+
+            .reveal .interactive-js textarea {
+                font-size: 20px;
+                height: 200px;
+                width: 500px;
+                padding: 10px;
+            }
+
+            .reveal .interactive-js .output {
+                font-size: 100px;
+            }
         </style>
 
 		<!-- Printing and PDF exports -->
@@ -45,6 +56,10 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script src="js/jquery.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -130,6 +145,11 @@
                         <a href="https://socialcast.bekk.no/messages/36924" target="_blank"><img src="img/rar-teaser.png" alt="socialcats"></a>
                     </section>
 
+                    <section class="interactive-js">
+                        <textarea title="javascript"></textarea>
+                        <div class="output"></div>
+                    </section>
+
                     <section>Vis kodepoints og zwj i javascript</section>
                     <section>Hvordan bygges nye emojis opp (+)
                     zero width joiner</section>
@@ -150,10 +170,6 @@
                 </section>
 			</div>
 		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script src="js/jquery.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -193,7 +209,34 @@
 
                 });
             });
+        </script>
 
+        <script>
+            $(document).ready(function() {
+                $('.interactive-js').each(function(i, e) {
+                    var input = $(e).find('[title="javascript"]'),
+                        output = $(e).find('.output');
+
+                    console.log(output);
+                    $(input).keyup(function() {
+                        var input = $(this).val();
+
+                        try {
+                            var res = eval(input);
+
+                            if (typeof res == 'function') {
+                                output.text('');
+                            } else {
+                                output.text(res);
+                            }
+
+                        } catch (e) {
+                            output.text('');
+                            console.error(e);
+                        }
+                    });
+                });
+            });
         </script>
 	</body>
 </html>
