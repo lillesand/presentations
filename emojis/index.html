@@ -37,14 +37,27 @@
             }
 
             .reveal .interactive-js textarea {
-                font-size: 20px;
+                font-size: 30px;
+                width: 60%;
                 height: 200px;
-                width: 500px;
-                padding: 10px;
+                padding: 20px;
+                margin-top: -200px;
+                margin-bottom: 20px;
             }
 
             .reveal .interactive-js .output {
-                font-size: 100px;
+                font-size: 40px;
+                width: 63%;
+                min-height: 100px;
+                padding: 10px;
+                background-color: lightslategray;
+                margin: auto;
+                text-align: left;
+            }
+
+            .reveal .img-with-src .src {
+                float: right;
+                font-size: 20px;
             }
         </style>
 
@@ -143,6 +156,14 @@
                     
                     <section>
                         <a href="https://socialcast.bekk.no/messages/36924" target="_blank"><img src="img/rar-teaser.png" alt="socialcats"></a>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Browserne skifter font uten å si noe når de finner emojis</li>
+                                <li>Hva hver enkelt browser definerer som å "finne emojis" kan skille</li>
+                                <li>Safari tar tydeligvis emojis svært alvorlig</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section class="interactive-js">
@@ -150,23 +171,52 @@
                         <div class="output"></div>
                     </section>
 
-                    <section>Vis kodepoints og zwj i javascript</section>
-                    <section>Hvordan bygges nye emojis opp (+)
-                    zero width joiner</section>
-                    <section>Standardisering</section>
+                    <section>
+                        <div class="img-with-src">
+                            <img src="img/unicode-standardisering.png">
+                            <span class="src">http://unicode.org/emoji/charts/full-emoji-list.html#1f52b</span>
+                        </div>
+                    </section>
                 </section>
 
                 <section id="emojis-fabriks">
-                    <section>Hvem lager emojis? Emojidex osv</section>
-                </section>
+                    <section>
+                        Eksempel på et emojisett på tvers av platformer
 
+                        <aside class="notes">
+                            <ul>
+                                <li>Hvem lager emojis?</li>
+                                <li>Tidligere var det et problem at emojis kunne være så forskjellige på ulike platformer at det var skummelt å bruke</li>
+                                <li>Mer fokus på det nå, stadig et mindre problem</li>
+                            </ul>
+                        </aside>
+                    </section>
 
-                <section id="kulturelle-godbiter">
+                    <section>
+                        http://unicode.org/emoji/charts/emoji-candidates.html
+                        <aside class="notes">
+                            <ul>
+                                <li>Hva kan vi vente oss fremover?</li>
+                                <li>Emojis har blitt for stort til å bare bli besluttet av en liten gruppe</li>
+                                <li>Standardiserte kriterier, arbeidsgruppe som jobber med hva som skal inn</li>
+                                <li>… og det er viktig, for så utbredt som emojis har blitt betyr det noe!</li>
+                            </ul>
+                        </aside>
+                    </section>
 
+                    <section class="single-emoji-slide">
+                        🌮
+                        <aside class="notes">
+                            <ul>
+                                <li>Hvordan skjedde egentlig taco-emojien?</li>
+                            </ul>
+                        </aside>
+                    </section>
                 </section>
 
                 <section id="samfunnsimpact">
-
+                    <section>Hudfarger</section>
+                    <section>Kjønnsmønstre</section>
                 </section>
 			</div>
 		</div>
@@ -219,16 +269,17 @@
 
                     console.log(output);
                     $(input).keyup(function() {
+
+                        var printed = '';
+                        var p = function(s) {
+                            printed += '> ' + s + '<br>';
+                        };
+
                         var input = $(this).val();
 
                         try {
-                            var res = eval(input);
-
-                            if (typeof res == 'function') {
-                                output.text('');
-                            } else {
-                                output.text(res);
-                            }
+                            eval(input);
+                            output.html(printed);
 
                         } catch (e) {
                             output.text('');
