@@ -19,7 +19,7 @@
             }
 
             .reveal section.explained-emojis {
-                font-size: 150px;
+                font-size: 250px;
             }
 
             .reveal section.explained-emojis .text-emoji {
@@ -71,7 +71,8 @@
             @keyframes spin { 100% { transform:rotate(-360deg); } }
 
             .emoji-decomposer input {
-                width: 1em;
+                width: 1.5em;
+                text-align: center;
                 padding: 10px;
                 font-size: 40px;
             }
@@ -104,13 +105,27 @@
                     </section>
 
                     <section>
-                        <h2>Yo!</h2>
+                        <h2 style="text-transform: none; font-size: 0.5em;">Hva er egentlig greia med Emojis?</h2>
                         <img src="img/joran.jpg" alt="Yo!" style="width: 30%">
+
+                        <aside class="notes">
+                            I dag skal vi dekke:
+                            <ul>
+                                <li>Emojiens historikk</li>
+                                <li>Hvorfor emojis av og til blir seende så jævla rare ut?</li>
+                                <li>Hvordan oppstår nye emojis?</li>
+                            </ul>
+                        </aside>
                     </section>
 
-                    <section data-background-image="img/discovery.png" data-background-size="100%" data-background-color="white"></section>
                     <section data-background-color="white">
                         <img src="img/entusiast.png" style="height: 80%"/>
+                        <aside class="notes">
+                            <ul>
+                                <li>Ivrig type!</li>
+                                <li>Tok kanskje litt overhånd en periode</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
@@ -157,12 +172,11 @@
 
                     <section class="single-emoji-slide">
                         <span>🤓</span>
+
                         <aside class="notes">
                             <ul>
-                                <li>Unicode 6.0 i 2010</li>
-                                <li>Standardiserte emojis</li>
-                                <li>Måtte ta hensyn til eksisterende bruk</li>
-                                <li>Japan, webdings, osv</li>
+                                <li>Nå skal vi nørde litt!</li>
+                                <li>Hvor mange vet hva Unicode er?</li>
                             </ul>
                         </aside>
                     </section>
@@ -170,13 +184,40 @@
 
 
                 <section id="tech">
+                    <section data-background-color="white">
+                            <a href="https://unicode-table.com/en/#control-character" target="_blank">
+                                <img src="img/unicode.svg.png" style="width: 60%; height: 60%;">
+                            </a>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Bits and bytes til lesbart språk - engelsk, norsk, kinesisk, urdu</li>
+                                <li>Før i tiden hadde vi ascii - 7 bits, 128 tegn</li>
+                                <li>Ca 114000 tegn</li>
+                                <li>Unicode 6.0 i 2010</li>
+                                <li>Standardiserte emojis</li>
+                                <li>Emoji er en del av det internasjonale språket!</li>
+                            </ul>
+                        </aside>
+                    </section>
+
                     <section data-background-image="img/uffda.png" data-background-size="100%" data-background-color="white"></section>
                     <section data-background-color="white">
                         <img src="img/brokeback-linux.png" alt="lol">
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Mailsoftware som ikke støtter den utvidede delen av Unicode</li>
+                                <li>Ville brått slitt med Urdu også!</li>
+                            </ul>
+                        </aside>
                     </section>
-                    
-                    <section>
-                        <a href="https://socialcast.bekk.no/messages/36924" target="_blank"><img src="img/rar-teaser.png" alt="socialcats"></a>
+
+
+                    <section class="single-emoji-slide">
+                       <div><span class="emoji male-dancer">👯‍♂️</span></div>
+                       <div class="fragment"><span class="emoji female-dancer"> 👯</span>♂</div>
+
 
                         <aside class="notes">
                             <ul>
@@ -190,15 +231,35 @@
                     <section class="interactive-js">
                         <textarea title="javascript"></textarea>
                         <div class="output"></div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>'.h'.length</li>
+                                <li>'hei'.length</li>
+                                <li>mann.length</li>
+                                <li>familie.length</li>
+                                <li>plukke ut medlemmene i en familie</li>
+                                <li>Komponere en egen emoji?</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section class="emoji-decomposer">
                         <input type="text" title="emoji">
                         <div class="output"></div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Male</li>
+                                <li>Black male - snakk om fitzpatrick</li>
+                                <li>Male dancer</li>
+                                <li>Familie</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
-                <section id="emojis-fabriks">
+                <section id="nye-emojis">
                     <section>
                         <div class="img-with-src">
                             <img src="img/unicode-standardisering-aliens.png">
@@ -207,10 +268,11 @@
 
                         <aside class="notes">
                             <ul>
-                                <li>Mange forsøker å lage sine egne emojis: apple, fb, twitter, google, emojione</li>
-                                <li>Noen av de utbredte (f.eks. Apple) har udefinert lisensiering</li>
-                                <li>Krevende game, tungvint utrulling (typisk systemfonter), mye bevegelse. 2389 emojis i den nye speccen (inkluderer modifiers og zjw)</li>
+                                <li>Alle de store lager sine egne emojiset: apple, fb, twitter, google</li>
                                 <li>Pleide å være dels store inter-op problemer</li>
+                                <li>Det krever mye; 2389 emojis i den nyeste speccen (inkludert fitzpatrick og zjw)</li>
+                                <li>Det er for viktig til å <em>ikke</em> være med på for de store!</li>
+                                <li>Dette er noe av det nærmeste vi er internasjonalt språk nå!</li>
                             </ul>
                         </aside>
                     </section>
@@ -227,9 +289,7 @@
                             </ul>
                         </aside>
                     </section>
-                </section>
 
-                <section id="samfunnsimpact">
                     <section style="font-size: 190px; line-height: 150px;">
                         <span>🏳️‍🌈</span><br><br><span>👩‍🚒</span><span>👨🏾‍🚀</span><span>💁‍♂️</span>
                         <aside class="notes">
@@ -250,14 +310,14 @@
                                 <li>Hva har vi lært? Vel, ikke stort</li>
                                 <li>Men, emojis er helt klart en greie som betyr noe</li>
                                 <li>Spriter opp en mail, gøyer opp en presentasjon</li>
-                                <li>Gode erfaringer med å bruke det i litt trauste kontekster. API-dokumentasjon. Tilbud?</li>
-                                <li>Vi tenker ofte: mer formelt, mer traust, mer kjedelig. Når er kjedelig egentlig bra?</li>
+                                <li>Det er overalt rundt oss - det er for viktig til å bare behandle som søte smileys</li>
+                                <li>Så ikke skam deg - bruk det og kos deg. Så får du heller sende ut noen svarte spørsmålstegn i ny og ne!</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section class="single-emoji-slide">
-                        <span class="emoji wave rotating">👋</span>
+                        <span class="emoji wave">👋</span>
 
                         <aside class="notes">
                             <ul>
