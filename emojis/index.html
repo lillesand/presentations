@@ -69,6 +69,17 @@
                 animation:spin 4s linear infinite;
             }
             @keyframes spin { 100% { transform:rotate(-360deg); } }
+
+            .emoji-decomposer input {
+                width: 1em;
+                padding: 10px;
+                font-size: 40px;
+            }
+
+            .emoji-decomposer .output {
+                margin-top: 20px;
+                font-size: 100px;
+            }
         </style>
 
 		<!-- Printing and PDF exports -->
@@ -178,6 +189,11 @@
 
                     <section class="interactive-js">
                         <textarea title="javascript"></textarea>
+                        <div class="output"></div>
+                    </section>
+
+                    <section class="emoji-decomposer">
+                        <input type="text" title="emoji">
                         <div class="output"></div>
                     </section>
                 </section>
@@ -299,7 +315,6 @@
                     var input = $(e).find('[title="javascript"]'),
                         output = $(e).find('.output');
 
-                    console.log(output);
                     $(input).keyup(function() {
 
                         var printed = '';
@@ -317,6 +332,33 @@
                             output.text('');
                             console.error(e);
                         }
+                    });
+                });
+            });
+        </script>
+
+
+        <script>
+            $(document).ready(function() {
+                $('.emoji-decomposer').each(function(i, e) {
+                    var input = $(e).find('[title="emoji"]'),
+                        output = $(e).find('.output');
+
+                    $(input).bind('input', function() {
+                        var input= $(this).val();
+
+                        var emojiparts = input.split('\u200d');
+                        var emojis = [];
+
+                        emojiparts.forEach(function(part) {
+                            var emojisInPart = '';
+                            for (i = 0; i < part.length; i += 2) {
+                                emojisInPart += ' ' + String.fromCodePoint(part.codePointAt(i));
+                            }
+                            emojis.push(emojisInPart);
+                        });
+
+                        output.text(emojis.join(' (+)'));
                     });
                 });
             });
