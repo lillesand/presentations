@@ -96,16 +96,17 @@
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
         <script src="js/jquery.js"></script>
+        <script src="js/lodash.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
                 <section id="hei">
-                    <section class="single-emoji-slide">
+                    <section class="single-emoji-slide" data-time="0.5">
                         <span>🙇</span>
                     </section>
 
-                    <section>
+                    <section data-time="0.75">
                         <h2 style="text-transform: none; font-size: 0.5em;">Hva er egentlig greia med Emojis?</h2>
                         <img src="img/joran.jpg" alt="Yo!" style="width: 30%">
 
@@ -119,7 +120,7 @@
                         </aside>
                     </section>
 
-                    <section data-background-color="white">
+                    <section data-background-color="white" data-time="0.5">
                         <img src="img/entusiast.png" style="height: 80%"/>
                         <aside class="notes">
                             <ul>
@@ -131,7 +132,7 @@
                 </section>
 
                 <section id="historie" class="explained-emojis">
-                    <section>
+                    <section data-time="0.75">
                         <div class="revolving"><span class="text-emoji">:)</span></div>
                         <div class="revolving"><span class="text-emoji">☺</span></div>
                         <div class="revolving"><span class="text-emoji">J</span></div>
@@ -145,7 +146,7 @@
                         </aside>
                     </section>
 
-                    <section id="japan" class="explained-emojis" style="font-size: 0.8em">
+                    <section id="japan" class="explained-emojis" style="font-size: 0.8em" data-time="1">
                         <div class="revolving"><span class="text-emoji">(n_n)</span><span class="explanation">smile</span></div>
                         <div class="revolving"><span class="text-emoji">(._.)</span><span class="explanation">uh…oh</span></div>
                         <div class="revolving"><span class="text-emoji">(-_-)</span><span class="explanation">sleepy</span></div>
@@ -167,7 +168,7 @@
                         </aside>
                     </section>
 
-                    <section data-background-color="white">
+                    <section data-background-color="white" data-time="0.5">
                         <img src="img/nttcom-emoji.png" alt="nttcom emojis">
                         <aside class="notes">
                             <ul>
@@ -177,7 +178,7 @@
                         </aside>
                     </section>
 
-                    <section data-background-color="white">
+                    <section data-background-color="white" data-time="0.75">
                         <img src="img/original-ios-emoji-set.jpeg"/>
 
                         <aside class="notes">
@@ -189,7 +190,7 @@
                         </aside>
                     </section>
 
-                    <section class="single-emoji-slide">
+                    <section class="single-emoji-slide" data-time="0.25">
                         <span>🤓</span>
 
                         <aside class="notes">
@@ -203,7 +204,7 @@
 
 
                 <section id="tech">
-                    <section data-background-color="white">
+                    <section data-background-color="white" data-time="1">
                             <a href="https://unicode-table.com/en/#control-character" target="_blank">
                                 <img src="img/unicode.svg.png" style="width: 60%; height: 60%;">
                             </a>
@@ -220,8 +221,8 @@
                         </aside>
                     </section>
 
-                    <section data-background-image="img/uffda.png" data-background-size="100%" data-background-color="white"></section>
-                    <section data-background-color="white">
+                    <section data-background-image="img/uffda.png" data-background-size="100%" data-background-color="white" data-time="0.5"></section>
+                    <section data-background-color="white" data-time="0.5">
                         <img src="img/brokeback-linux.png" alt="lol">
 
                         <aside class="notes">
@@ -233,7 +234,7 @@
                     </section>
 
 
-                    <section class="single-emoji-slide">
+                    <section class="single-emoji-slide" data-time="0.5">
                        <div><span class="emoji male-dancer">👯‍♂️</span></div>
                        <div class="fragment"><span class="emoji female-dancer"> 👯</span>♂</div>
 
@@ -246,7 +247,7 @@
                         </aside>
                     </section>
 
-                    <section class="interactive-js">
+                    <section class="interactive-js" data-time="4">
                         <textarea title="javascript"></textarea>
                         <div class="output"></div>
 
@@ -262,7 +263,7 @@
                         </aside>
                     </section>
 
-                    <section class="emoji-decomposer">
+                    <section class="emoji-decomposer" data-time="2">
                         <input type="text" title="emoji">
                         <div class="output"></div>
 
@@ -278,7 +279,7 @@
                 </section>
 
                 <section id="nye-emojis">
-                    <section>
+                    <section data-time="0.75">
                         <div class="img-with-src">
                             <img src="img/unicode-standardisering-custom.png">
                             <div class="src">http://unicode.org/emoji/charts/full-emoji-list.html</div>
@@ -294,20 +295,21 @@
                         </aside>
                     </section>
 
-                    <section class="single-emoji-slide">
+                    <section class="single-emoji-slide" data-time="1">
                         🌮
                         <aside class="notes">
                             <ul>
                                 <li>Hvordan skjedde egentlig taco-emojien?</li>
                                 <li>Stor kampanje på nett, ledet av Taco Bell!</li>
                                 <li>Emojis har blitt viktig og det <em>betyr noe</em> hva som er en emoji</li>
+                                <li>Cola er helt mainstream. Bør colaflaska inn i emojisettet?</li>
                                 <li>Standardiserte kriterier, arbeidsgruppe som jobber med hva som skal inn</li>
                                 <li>Typisk om forventet bruk, fyller et behov, et hull. Skal ikke <em>tjene en sak</em> (ikke være politisk)</li>
                             </ul>
                         </aside>
                     </section>
 
-                    <section style="font-size: 190px; line-height: 150px;">
+                    <section style="font-size: 190px; line-height: 150px;" data-time="2">
                         <span>🏳️‍🌈</span><br><br><span>👩‍🚒</span><span>👨🏾‍🚀</span><span>💁‍♂️</span>
                         <aside class="notes">
                             <ul>
@@ -320,7 +322,7 @@
                 </section>
 
                 <section id="outro">
-                    <section class="single-emoji-slide">
+                    <section class="single-emoji-slide" data-time="1">
                         <span class="emoji rocket rotating">🚀</span>
                         <aside class="notes">
                             <ul>
@@ -333,7 +335,7 @@
                         </aside>
                     </section>
 
-                    <section class="single-emoji-slide">
+                    <section class="single-emoji-slide" data-time="0.25">
                         <span class="emoji wave">👋</span>
 
                         <aside class="notes">
@@ -439,6 +441,48 @@
                     });
                 });
             });
+        </script>
+
+        <script>
+            _(document.querySelectorAll("section"))
+                    .filter(function(e) { return e.parentElement.nodeName == "SECTION" })
+                    .reduce(function(t, e) {
+                        if (e.dataset && e.dataset['time']) {
+                            t.timing = t.next;
+                            t.next = t.timing + parseFloat(e.dataset['time']);
+                        }
+                        e.dataset['next'] = t.next;
+                        e.dataset['timing'] = t.timing;
+                        return t;
+                    }, { timing: 0, next: 0 });
+
+            _(document.querySelectorAll("section"))
+                .filter(function (e) {
+                    return e.dataset.timing;
+                })
+                .each(function (e) {
+                    _.each(e.querySelectorAll("aside.notes"), function (n) {
+                        var el = document.createElement("div");
+                        el.style.position = "absolute";
+                        el.style.right = "0";
+                        el.style.top = "1.6em";
+                        el.style.height = "2em";
+                        el.style.width = "50%";
+                        el.style.zIndex = 100;
+                        el.style.textAlign = "right";
+                        el.style.padding = "22px";
+                        el.style.fontSize = "1.6em";
+                        el.textContent = showAsTimeInMin(e.dataset.timing) + " - " + showAsTimeInMin(e.dataset.next);
+                        n.insertBefore(el, n.firstChild);
+                    })
+                });
+
+            function showAsTimeInMin(t) {
+                t = parseFloat(t);
+                var min = Math.floor(t);
+                var sek = ((t % 1) * 60) + '';
+                return min + ":" + (sek.length === 1 ? "0" + sek : sek);
+            }
         </script>
 	</body>
 </html>
