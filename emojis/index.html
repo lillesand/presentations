@@ -239,8 +239,8 @@
                                 <li>'hei'.length</li>
                                 <li>mann.length</li>
                                 <li>familie.length</li>
-                                <li>codePointAt, fromCodePoint</li>
-                                <li>Komponere en egen emoji? mann + fitzpatrick + \u200d + rocket</li>
+                                <li>unicodeAt</li>
+                                <li>Komponere en egen emoji? mann + \u200d + rocket</li>
                             </ul>
                         </aside>
                     </section>
@@ -395,6 +395,10 @@
                         }
                     });
                 });
+
+                String.prototype.unicodeAt = function(i) {
+                    return String.fromCodePoint(this.codePointAt(i));
+                }
             });
         </script>
 
