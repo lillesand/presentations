@@ -1,0 +1,476 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <style>
+            .reveal section img {
+                border: none;
+                box-shadow: none;
+            }
+
+            .reveal section.explained-emojis {
+                font-size: 200px;
+            }
+
+            .reveal section.explained-emojis .text-emoji {
+                font-family: Courier, 'Courier New', monospace;
+            }
+
+            .reveal section.explained-emojis .explanation {
+                display: block;
+                font-size: 30px;
+                margin-left: 150px;
+            }
+
+            .reveal section.single-emoji-slide {
+                font-size: 250px;
+            }
+
+            .reveal .interactive-js textarea {
+                font-size: 30px;
+                width: 60%;
+                height: 200px;
+                padding: 20px;
+                margin-top: -200px;
+                margin-bottom: 20px;
+            }
+
+            .reveal .interactive-js .output {
+                font-size: 40px;
+                width: 63%;
+                min-height: 100px;
+                padding: 10px;
+                background-color: lightslategray;
+                margin: auto;
+                text-align: left;
+            }
+
+            .reveal .img-with-src .src {
+                text-align: right;
+                margin-right: 100px;
+                font-size: 20px;
+            }
+
+            .rotating {
+                position: absolute;
+                bottom: 40%;
+                left: 50%;
+                width: 10px;
+                height: 10px;
+                animation:spin 4s linear infinite;
+            }
+            @keyframes spin { 100% { transform:rotate(-360deg); } }
+
+            .emoji-decomposer input {
+                width: 1.5em;
+                text-align: center;
+                padding: 10px;
+                font-size: 40px;
+            }
+
+            .emoji-decomposer .output {
+                margin-top: 20px;
+                font-size: 100px;
+            }
+        </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/lodash.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section id="hei">
+                    <section class="single-emoji-slide" data-time="0.5">
+                        <span>🙇</span>
+                    </section>
+
+                    <section data-time="0.75">
+                        <h2 style="text-transform: none; font-size: 0.5em;">Hva er egentlig greia med Emojis?</h2>
+                        <img src="img/joran.jpg" alt="Yo!" style="width: 30%">
+
+                        <aside class="notes">
+                            I dag skal vi dekke:
+                            <ul>
+                                <li>Emojiens historikk</li>
+                                <li>Hvorfor emojis av og til blir seende så jævla rare ut?</li>
+                                <li>Hvordan oppstår nye emojis?</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-background-color="white" data-time="0.5">
+                        <img src="img/entusiast.png" style="height: 80%"/>
+                        <aside class="notes">
+                            <ul>
+                                <li>Ivrig type!</li>
+                                <li>Tok kanskje litt overhånd en periode</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section id="historie">
+                    <section id="japan" class="explained-emojis" data-time="1">
+                        <div class="revolving"><span class="text-emoji">(n_n)</span><span class="explanation">smile</span></div>
+                        <div class="revolving"><span class="text-emoji">(._.)</span><span class="explanation">uh…oh</span></div>
+                        <div class="revolving"><span class="text-emoji">(-_-)</span><span class="explanation">sleepy</span></div>
+                        <div class="revolving"><span class="text-emoji">(;_;)</span><span class="explanation">tears</span></div>
+                        <div class="revolving"><span class="text-emoji">(@_@)</span><span class="explanation">confused</span></div>
+                        <div class="revolving"><span class="text-emoji">(*_*)</span><span class="explanation">astonished</span></div>
+                        <div class="revolving"><span class="text-emoji">(x_x)</span><span class="explanation">dead</span></div>
+                        <div class="revolving"><span class="text-emoji">(>_<)</span><span class="explanation">ouch</span></div>
+                        <div class="revolving"><span class="text-emoji">(^_^)</span><span class="explanation">happy</span></div>
+                        <div class="revolving"><span class="text-emoji">*(^_^)*</span><span class="explanation">happier</span></div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Japanske smileys</li>
+                                <li>Japansk mobilkultur; smarttelefoner med fargeskjermer, kamera og pedometer før 2000</li>
+                                <li>Lenge før oss med 3G og utstrakt bruk av data</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-background-color="white" data-time="0.5">
+                        <img src="img/nttcom-emoji.png" alt="nttcom emojis">
+                        <aside class="notes">
+                            <ul>
+                                <li>Verdens første grafiske emojisett</li>
+                                <li>NTT DoCoMo 1998</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-background-color="white" data-time="0.75">
+                        <img src="img/original-ios-emoji-set.jpeg"/>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>iPhone3GS i Japan i 2009</li>
+                                <li>Willem Van Lancker designet 400 av 500 som intern</li>
+                                <li>Skulle endre mye - brakte emojiene til vesten</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section class="single-emoji-slide" data-time="0.25">
+                        <span>🤓</span>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Nå skal vi nørde litt!</li>
+                                <li>Hvor mange vet hva Unicode er?</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+
+                <section id="tech">
+                    <section data-background-color="white" data-time="1">
+                            <a href="https://unicode-table.com/en/#control-character" target="_blank">
+                                <img src="img/unicode.svg.png" style="width: 60%; height: 60%;">
+                            </a>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Bits and bytes til lesbart språk - engelsk, norsk, kinesisk, urdu</li>
+                                <li>Ca 114000 tegn</li>
+                                <li>Unicode 6.0 i 2010 standardiserte emojis</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-background-image="img/uffda.png" data-background-size="100%" data-background-color="white" data-time="0.5"></section>
+                    <section data-background-color="white" data-time="0.5">
+                        <img src="img/brokeback-linux.png" alt="lol">
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Mailsoftware som ikke støtter den utvidede delen av Unicode</li>
+                                <li>Ville brått slitt med Urdu også!</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+
+                    <section class="single-emoji-slide" data-time="0.5">
+                       <div><span class="emoji male-dancer">👯‍♂️</span></div>
+                       <div class="fragment"><span class="emoji female-dancer"> 👯</span>♂</div>
+
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Det er ikke helt rett frem å vise emojis</li>
+                                <li>Ikke alle er rullet på ut på alle platformer, det funker litt forskjellig overalt</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section class="interactive-js" data-time="4">
+                        <textarea title="javascript"></textarea>
+                        <div class="output"></div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>'.h'.length</li>
+                                <li>'hei'.length</li>
+                                <li>mann.length</li>
+                                <li>familie.length</li>
+                                <li>unicodeAt</li>
+                                <li>Komponere en egen emoji? mann + \u200d + rocket</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section class="emoji-decomposer" data-time="2">
+                        <input type="text" title="emoji">
+                        <div class="output"></div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Male</li>
+                                <li>Black male - snakk om fitzpatrick</li>
+                                <li>Male dancer</li>
+                                <li>Familie</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section id="nye-emojis">
+                    <section data-time="0.75">
+                        <div class="img-with-src">
+                            <img src="img/unicode-standardisering-custom.png">
+                            <div class="src">http://unicode.org/emoji/charts/full-emoji-list.html</div>
+                        </div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Alle de store lager sine egne emojiset: apple, fb, twitter, google</li>
+                                <li>Det er for viktig til å <em>ikke</em> være med på for de store!</li>
+                                <li>Det krever mye; 2389 emojis i den nyeste speccen (inkludert fitzpatrick og zjw)</li>
+                                <li>Gamechanger for digital kommunikasjon - uavhengig av språk!</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section class="single-emoji-slide" data-time="1">
+                        🌮
+                        <aside class="notes">
+                            <ul>
+                                <li>Hvordan skjedde egentlig taco-emojien?</li>
+                                <li>Stor kampanje på nett, ledet av Taco Bell!</li>
+                                <li>Emojis har blitt viktig og det <em>betyr noe</em> hva som er en emoji</li>
+                                <li>Cola er helt mainstream. Bør colaflaska inn i emojisettet?</li>
+                                <li>Standardiserte kriterier, arbeidsgruppe som jobber med hva som skal inn</li>
+                                <li>Typisk om forventet bruk, fyller et behov, et hull. Skal ikke <em>tjene en sak</em> (ikke være politisk)</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section style="font-size: 190px; line-height: 150px;" data-time="2">
+                        <span>🏳️‍🌈</span><br><br><span>👩‍🚒</span><span>👨🏾‍🚀</span><span>💁‍♂️</span>
+                        <aside class="notes">
+                            <ul>
+                                <li>Hudfarger ble innført og var en stor greie</li>
+                                <li>PK-mafia… eller faktisk signifikant?</li>
+                                <li>Påvirker hvordan vi faktisk ser verden</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section id="outro">
+                    <section class="single-emoji-slide" data-time="1">
+                        <span class="emoji rocket rotating">🚀</span>
+                        <aside class="notes">
+                            <ul>
+                                <li>Hva har vi lært? Vel, ikke stort</li>
+                                <li>Men, emojis er helt klart en greie som betyr noe</li>
+                                <li>Spriter opp en mail, gøyer opp en presentasjon</li>
+                                <li>Det er overalt rundt oss - det er for viktig til å bare behandle som søte smileys</li>
+                                <li>Så ikke skam deg - bruk det og kos deg. Så får du heller sende ut noen svarte spørsmålstegn i ny og ne!</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section class="single-emoji-slide" data-time="0.25">
+                        <span class="emoji wave">👋</span>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Takk for meg!</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+                controls: false,
+                progress: false,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+        <script>
+            $(document).ready(function() {
+                $('.slides section').each(function(i, e) {
+                    var revolvers = $(e).find('.revolving');
+                    if (revolvers.length > 1 && $(e).find('section').length == 0) {
+                        revolvers.css('display', 'none');
+                        revolvers.css('opacity', '1');
+                        revolvers.css('transition', 'opacity .25s ease-in-out;');
+
+                        var current = 0;
+                        $(revolvers[current]).fadeIn(0);
+                        setInterval(function() {
+                            var next = (current + 1) % revolvers.length;
+                            $(revolvers[current]).fadeOut(500, function() {
+                                $(revolvers[next]).fadeIn(500);
+                            });
+
+                            current = next;
+                        }, 2500);
+                    }
+
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('.interactive-js').each(function(i, e) {
+                    var input = $(e).find('[title="javascript"]'),
+                        output = $(e).find('.output');
+
+                    $(input).keyup(function() {
+
+                        var printed = '';
+                        var p = function(s) {
+                            printed += '> ' + s + '<br>';
+                        };
+
+                        var input = $(this).val();
+
+                        try {
+                            eval(input);
+                            output.html(printed);
+
+                        } catch (e) {
+                            output.text('');
+                            console.error(e);
+                        }
+                    });
+                });
+
+                String.prototype.unicodeAt = function(i) {
+                    return String.fromCodePoint(this.codePointAt(i));
+                }
+            });
+        </script>
+
+
+        <script>
+            $(document).ready(function() {
+                $('.emoji-decomposer').each(function(i, e) {
+                    var input = $(e).find('[title="emoji"]'),
+                        output = $(e).find('.output');
+
+                    $(input).bind('input', function() {
+                        var input= $(this).val();
+
+                        var emojiparts = input.split('\u200d');
+                        var emojis = [];
+
+                        emojiparts.forEach(function(part) {
+                            var emojisInPart = '';
+                            for (i = 0; i < part.length; i += 2) {
+                                emojisInPart += ' ' + String.fromCodePoint(part.codePointAt(i));
+                            }
+                            emojis.push(emojisInPart);
+                        });
+
+                        output.text(emojis.join(' (+)'));
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            _(document.querySelectorAll("section"))
+                    .filter(function(e) { return e.parentElement.nodeName == "SECTION" })
+                    .reduce(function(t, e) {
+                        if (e.dataset && e.dataset['time']) {
+                            t.timing = t.next;
+                            t.next = t.timing + parseFloat(e.dataset['time']);
+                        }
+                        e.dataset['next'] = t.next;
+                        e.dataset['timing'] = t.timing;
+                        return t;
+                    }, { timing: 0, next: 0 });
+
+            _(document.querySelectorAll("section"))
+                .filter(function (e) {
+                    return e.dataset.timing;
+                })
+                .each(function (e) {
+                    _.each(e.querySelectorAll("aside.notes"), function (n) {
+                        var el = document.createElement("div");
+                        el.style.position = "absolute";
+                        el.style.right = "0";
+                        el.style.top = "1.6em";
+                        el.style.height = "2em";
+                        el.style.width = "50%";
+                        el.style.zIndex = 100;
+                        el.style.textAlign = "right";
+                        el.style.padding = "22px";
+                        el.style.fontSize = "1.6em";
+                        el.textContent = showAsTimeInMin(e.dataset.timing) + " - " + showAsTimeInMin(e.dataset.next);
+                        n.insertBefore(el, n.firstChild);
+                    })
+                });
+
+            function showAsTimeInMin(t) {
+                t = parseFloat(t);
+                var min = Math.floor(t);
+                var sek = ((t % 1) * 60) + '';
+                return min + ":" + (sek.length === 1 ? "0" + sek : sek);
+            }
+        </script>
+	</body>
+</html>
