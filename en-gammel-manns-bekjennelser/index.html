@@ -13,6 +13,11 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<style>
+
+			.reveal .progress span {
+				background-color: #FF0000;
+			}
+
 			.reveal .photo-slide h1, .reveal .photo-slide h2 {
 				background-color: rgba(20, 20, 20, 0.4);
 				opacity: 0.5;
@@ -76,7 +81,7 @@
 
 				<section id="tips">
 					<section data-background-image="img/offshoring.jpg"  class="photo-slide">
-						<h1>Produktfokus gjør gode team.</h1>
+						<h1>Produktfokus gir gode team.</h1>
 
 						<aside class="notes">
 							<ul>
@@ -210,15 +215,18 @@
 
 				<section>
 
-					<section>
-						<h1>Så…</h1>
+					<section data-background-color="white">
+						<div style="font-size: 48px;">❤️❤️ 👇 ❤️❤️</div>
+						<img src="img/posten.png" alt="posten <3" style="border:none; box-shadow:none; width: 50%;">
+						<div style="font-size: 48px; margin-top: 24px;">❤️❤️ 👆 ❤️❤️</div>
 
 						<aside class="notes">
 						    <ul>
 						        <li>Nesten ti år. Hva sitter jeg igjen med?</li>
 						        <li>Takknemlig ovenfor Posten</li>
 						        <li>Mye bra, noe dårlig. Rolig på prosjekt, satse i Bekk</li>
-						        <li>Slutter ikke fordi jeg er misfornøyd</li>
+								<li>Blir rart og trist å skifte – også spennende og fint!</li>
+								<li>Håper dere har fått noe ut av det!</li>
 						    </ul>
 						</aside>
 					</section>
@@ -236,6 +244,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 			    history: true,
+				controls: false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
